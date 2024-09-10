@@ -27,15 +27,15 @@ const ToDoList = () => {
         onClick={ () => { setCount( count + 1 ); console.log(count); } }
         >Add Count</button> */}
         <h1 className='text-center uppercase text-2xl font-bold my-10'>Todo List</h1>
-        <div className='border shadow rounded-lg p-6 max-w-2xl mx-auto'>
-            <div>
+        <div className='border shadow rounded-lg max-w-2xl mx-auto'>
+            <div className='p-5 border-b-2'>
                 <input
                 onKeyDown={addTask}
                 type="text" placeholder='📃Enter a task to add...'
                 className='py-1 px-3 w-full bg-gray-300' />
             </div>
             <br/>
-            <div>
+            <div className='p-5'>
                 {
                     taskList.map( ( task, index ) => { 
                         return<div className='shadow mb-5 p-5 border' key={index}>
